@@ -8,7 +8,8 @@ function CanvasTree() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    const tree = new Tree(ctx, canvas.width / 2, canvas.height);
+
+    const tree = new Tree(ctx, canvas.width / 1.8, canvas.height);
 
     const animate = () => {
       tree.draw();
@@ -17,6 +18,7 @@ function CanvasTree() {
 
     animate();
 
+    // 컴포넌트가 언마운트될 때 애니메이션 정리
     return () => {
       cancelAnimationFrame(tree.animation);
     };

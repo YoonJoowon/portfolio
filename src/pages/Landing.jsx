@@ -1,8 +1,7 @@
 import React from "react";
 import { styled, keyframes } from "styled-components";
-import { Link } from "react-router-dom";
 import CanvasTree from "../canvas/canvasTree.jsx";
-import Star from "../component/start.jsx";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -12,7 +11,9 @@ const Landing = () => {
       </CanvasTreeContainer>
       <Background>
         <TextBox>
-          <Title>프론트엔드 개발자 윤주원입니다.</Title>
+          <Link to="/About">
+            <Title>프론트엔드 개발자 윤주원입니다.</Title>
+          </Link>
           <Text>
             나무가 성장하는 것 처럼, 삶의 모든 경험과 기회를 환영하여 성장하고자
             합니다.
@@ -23,12 +24,19 @@ const Landing = () => {
           </Text>
         </TextBox>
       </Background>
-      <Star />
     </>
   );
 };
 
 export default Landing;
+const CanvasTreeContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+`;
 
 const Background = styled.div`
   width: 100%;
@@ -47,6 +55,9 @@ const fadeIn = keyframes`
 const TextBox = styled.div`
   margin-top: 200px;
   position: absolute;
+  a {
+    text-decoration: none;
+  }
 `;
 
 const Title = styled.div`
@@ -63,6 +74,7 @@ const Title = styled.div`
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   margin: 20px;
   position: relative;
+  cursor: pointer;
 
   /* 박스 내부의 요소들에 대한 스타일 */
   &::before,
@@ -94,6 +106,7 @@ const Title = styled.div`
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
   }
 `;
+
 const Text = styled.div`
   width: 400px;
   padding: 30px;
@@ -109,13 +122,4 @@ const Text = styled.div`
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   margin: 20px;
   margin-top: 40px;
-`;
-
-const CanvasTreeContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 `;

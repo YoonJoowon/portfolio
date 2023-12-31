@@ -37,6 +37,7 @@ const Background = styled.div`
     width: 100vw;
     height: 100vh;
     transform: rotateZ(35deg);
+    z-index: -1;
   }
 
   .shooting_star {
@@ -44,11 +45,7 @@ const Background = styled.div`
     left: 50%;
     top: 50%;
     height: 2px;
-    background: linear-gradient(
-      -45deg,
-      #b7ceff,
-      rgba(0, 0, 255, 0)
-    );
+    background: linear-gradient(-45deg, #b7ceff, rgba(0, 0, 255, 0));
     border-radius: 999px;
     filter: drop-shadow(0 0 6px #b7ceff);
     animation: tail ${shootingTime} ease-in-out infinite,

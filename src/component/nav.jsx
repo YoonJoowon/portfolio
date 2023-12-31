@@ -1,14 +1,23 @@
 import React from "react";
 import { styled, keyframes } from "styled-components";
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
     <>
       <ComponentBox>
-        <Component>Home</Component>
-        <Component>Project</Component>
-        <Component>About</Component>
-        <Component>Contect</Component>
+        <Link to="/">
+          <Component>Home</Component>
+        </Link>
+        <Link to="/About">
+          <Component>About</Component>
+        </Link>
+        <Link to="/Project">
+          <Component>Project</Component>
+        </Link>
+        <Link to="/Contact">
+          <Component>Contact</Component>
+        </Link>
       </ComponentBox>
     </>
   );
@@ -48,4 +57,10 @@ const Component = styled.div`
   font-size: 16px;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
 `;
