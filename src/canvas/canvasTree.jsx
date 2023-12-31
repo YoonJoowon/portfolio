@@ -29,4 +29,7 @@ export default CanvasTree;
 
 const StyledCanvas = styled.canvas`
   background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: block;
 `;
