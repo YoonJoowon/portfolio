@@ -7,7 +7,7 @@ export class Branch {
     this.color = 'white';
     this.lineWidth = lineWidth;
 
-    this.frame = 120;
+    this.frame = 150;
     this.cntFrame = 0; 
 
     this.gapX = (this.endX - this.startX) / this.frame;
