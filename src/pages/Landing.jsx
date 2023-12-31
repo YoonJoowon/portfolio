@@ -2,24 +2,28 @@ import React from "react";
 import { styled, keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import CanvasTree from "../canvas/canvasTree.jsx";
+import Star from "../component/start.jsx";
 
 const Landing = () => {
   return (
-    <Background>
-      <TextBox>
-        <Text>
-          나무가 성장하는 것 처럼, 삶의 모든 경험과 기회를 환영하여 성장하고자
-          합니다.
-        </Text>
-        <Text>
-          사용자들에게 직관적이며 매력적인 경험이 서비스의 곧 시장 경쟁력이라고
-          굳게 믿습니다.
-        </Text>
-      </TextBox>
+    <>
       <CanvasTreeContainer>
         <CanvasTree />
       </CanvasTreeContainer>
-    </Background>
+      <Background>
+        <TextBox>
+          <Text>
+            나무가 성장하는 것 처럼, 삶의 모든 경험과 기회를 환영하여 성장하고자
+            합니다.
+          </Text>
+          <Text>
+            사용자들에게 직관적이며 매력적인 경험이 서비스의 곧 시장
+            경쟁력이라고 굳게 믿습니다.
+          </Text>
+        </TextBox>
+      </Background>
+      <Star />
+    </>
   );
 };
 
@@ -41,6 +45,7 @@ const fadeIn = keyframes`
 
 const TextBox = styled.div`
   margin-top: 200px;
+  position: absolute;
 `;
 
 const Text = styled.div`

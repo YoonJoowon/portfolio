@@ -4,11 +4,11 @@ export class Branch {
     this.startY = startY;
     this.endX = endX;
     this.endY = endY;
-    this.color = 'white';
+    this.color = "white";
     this.lineWidth = lineWidth;
 
-    this.frame = 150;
-    this.cntFrame = 0; 
+    this.frame = 300;
+    this.cntFrame = 0;
 
     this.gapX = (this.endX - this.startX) / this.frame;
     this.gapY = (this.endY - this.startY) / this.frame;
@@ -24,7 +24,7 @@ export class Branch {
     ctx.beginPath();
 
     // 구간별 길이를 더해주어 다음 구간의 끝 좌표를 구함
-    this.currentX += this.gapX; 
+    this.currentX += this.gapX;
     this.currentY += this.gapY;
 
     ctx.moveTo(this.startX, this.startY);

@@ -28,8 +28,7 @@ function CanvasTree() {
 export default CanvasTree;
 
 const StyledCanvas = styled.canvas`
-  background-color: black;
-  width: 100vw;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   height: 100vh;
-  display: block;
+  width: 100vw;
 `;
