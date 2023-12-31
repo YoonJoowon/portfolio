@@ -5,7 +5,7 @@ import Nav from "./component/nav";
 import About from "./pages/About";
 import Project from "./pages/Project";
 import Contact from "./pages/Contact";
-import Star from "./component/start";
+import Star from "./component/star";
 
 function App() {
   return (

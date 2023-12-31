@@ -5,12 +5,12 @@ const Star = () => {
   return (
     <Background>
       <div className="night">
-        {[...Array(80)].map((_, index) => (
+        {[...Array(50)].map((_, index) => (
           <div
             key={index}
             className="shooting_star"
             style={{
-              animationDelay: `${Math.random() * 9999}ms`,
+              animationDelay: `${Math.random() * 5000}ms`,
               top: `${Math.random() * 200 - 30}%`,
               left: `${Math.random() * 100}%`,
             }}
@@ -23,7 +23,7 @@ const Star = () => {
 
 export default Star;
 
-const shootingTime = "9000ms";
+const shootingTime = "3000ms";
 
 const Background = styled.div`
   height: 100vh;
