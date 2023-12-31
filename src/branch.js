@@ -1,23 +1,20 @@
 export class Branch {
-  constructor(startX, startY, endX, endY, depth) {
+  constructor(startX, startY, endX, endY, lineWidth) {
     this.startX = startX;
     this.startY = startY;
     this.endX = endX;
     this.endY = endY;
-    this.depth = depth;
+    this.color = 'white';
+    this.lineWidth = lineWidth;
 
-    this.frame = 30; // 먼저 frame 설정
+    this.frame = 120;
+    this.cntFrame = 0; 
 
-    this.gapX = (endX - startX);
-    this.gapY = (endY - startY);
+    this.gapX = (this.endX - this.startX) / this.frame;
+    this.gapY = (this.endY - this.startY) / this.frame;
 
-    this.currentX = startX;
-    this.currentY = startY;
-
-    this.cntFrame = 0;
-
-    this.lineWidth = 2;
-    this.color = "white"; // 흰색으로 변경
+    this.currentX = this.startX;
+    this.currentY = this.startY;
   }
 
   draw(ctx) {
@@ -26,20 +23,30 @@ export class Branch {
 
     ctx.beginPath();
 
-    this.currentX += this.gapX / this.frame;
-    this.currentY += this.gapY / this.frame;
+    // 구간별 길이를 더해주어 다음 구간의 끝 좌표를 구함
+    this.currentX += this.gapX; 
+    this.currentY += this.gapY;
 
     ctx.moveTo(this.startX, this.startY);
     ctx.lineTo(this.currentX, this.currentY);
 
-    ctx.lineWidth = this.lineWidth;
+    if (this.lineWidth < 3) {
+      ctx.lineWidth = 0.2;
+    } else if (this.lineWidth < 7) {
+      ctx.lineWidth = this.lineWidth * 0.4;
+    } else if (this.lineWidth < 10) {
+      ctx.lineWidth = this.lineWidth * 0.8;
+    } else {
+      ctx.lineWidth = this.lineWidth;
+    }
+
     ctx.fillStyle = this.color;
     ctx.strokeStyle = this.color;
 
     ctx.stroke();
     ctx.closePath();
 
-    this.cntFrame++;
+    this.cntFrame++; // 현재 프레임수 증가
 
     // 다 안그렸으면 false를 리턴
     return false;

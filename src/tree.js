@@ -7,8 +7,8 @@ class Tree {
     this.ctx = ctx;
     this.posX = posX;
     this.posY = posY;
-    this.branches = [];
-    this.depth = 11;
+    this.branches = []; //가지 담는 배열
+    this.depth = 12;
 
     this.cntDepth = 0; // depth별로 그리기 위해 현재 depth 변수 선언
     this.animation = null; // 현재 동작하는 애니메이션
@@ -23,7 +23,7 @@ class Tree {
     }
 
     this.createBranch(this.posX, this.posY, -90, 0);
-    // this.draw();
+    this.draw();
   }
 
   createBranch(startX, startY, angle, depth) {
@@ -43,30 +43,25 @@ class Tree {
     this.createBranch(endX, endY, angle + this.random(15, 23), depth + 1);
   }
 
-  draw() {
-    console.log("애니메이션 중");
-    console.log("현재 깊이:", this.cntDepth);
-
+  draw(ctx) {
     // 다 그렸으면 true 리턴
-    if (this.cntDepth >= this.depth) {
-      console.log("애니메이션 중지");
+    if (this.cntDepth === this.depth) {
       cancelAnimationFrame(this.animation);
-      return;
     }
 
     // depth별로 가지를 그리기
     for (let i = this.cntDepth; i < this.branches.length; i++) {
-      for (let j = 0; j < this.branches[i].length; j++) {
-        const branchDrawn = this.branches[i][j].draw(this.ctx);
+      let pass = true;
 
-        if (branchDrawn) {
-          console.log(`Branch drawn: depth ${i}, index ${j}`);
-        }
+      for (let j = 0; j < this.branches[i].length; j++) {
+        pass = this.branches[i][j].draw(this.ctx);
       }
+
+      if (!pass) break;
+      this.cntDepth++;
     }
 
-    this.cntDepth++;
-    this.animation = requestAnimationFrame(() => this.draw());
+    this.animation = requestAnimationFrame(this.draw.bind(this));
   }
 
   random(min, max) {
