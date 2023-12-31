@@ -35,5 +35,5 @@ function App() {
 export default App;
 
 const StyledCanvas = styled.canvas`
-  background-color: black;
+  background-color: #222; /* dark gray instead of black */
 `;

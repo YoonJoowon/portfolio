@@ -1,5 +1,3 @@
-// branch.js
-
 export class Branch {
   constructor(startX, startY, endX, endY, depth) {
     this.startX = startX;
@@ -8,14 +6,15 @@ export class Branch {
     this.endY = endY;
     this.depth = depth;
 
-    this.gapX = (endX - startX) / this.frame;
-    this.gapY = (endY - startY) / this.frame;
+    this.frame = 30; // 먼저 frame 설정
+
+    this.gapX = (endX - startX);
+    this.gapY = (endY - startY);
 
     this.currentX = startX;
     this.currentY = startY;
 
     this.cntFrame = 0;
-    this.frame = 30;
 
     this.lineWidth = 2;
     this.color = "white"; // 흰색으로 변경
@@ -27,8 +26,8 @@ export class Branch {
 
     ctx.beginPath();
 
-    this.currentX += this.gapX;
-    this.currentY += this.gapY;
+    this.currentX += this.gapX / this.frame;
+    this.currentY += this.gapY / this.frame;
 
     ctx.moveTo(this.startX, this.startY);
     ctx.lineTo(this.currentX, this.currentY);

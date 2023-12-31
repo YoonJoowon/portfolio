@@ -23,7 +23,7 @@ class Tree {
     }
 
     this.createBranch(this.posX, this.posY, -90, 0);
-    this.draw();
+    // this.draw();
   }
 
   createBranch(startX, startY, angle, depth) {
@@ -44,8 +44,12 @@ class Tree {
   }
 
   draw() {
-    // 다 그렸으면 requestAnimationFrame을 중단해 메모리 누수가 없게 함.
-    if (this.cntDepth === this.depth) {
+    console.log("애니메이션 중");
+    console.log("현재 깊이:", this.cntDepth);
+
+    // 다 그렸으면 true 리턴
+    if (this.cntDepth >= this.depth) {
+      console.log("애니메이션 중지");
       cancelAnimationFrame(this.animation);
       return;
     }
@@ -65,17 +69,14 @@ class Tree {
     this.animation = requestAnimationFrame(() => this.draw());
   }
 
-  // 이 메서드가 어디에 있는지 알 수 없으므로 추가해야 합니다.
   random(min, max) {
     return Math.random() * (max - min) + min;
   }
 
-  // 이 메서드도 어디에 있는지 알 수 없으므로 추가해야 합니다.
   cos(angle) {
     return Math.cos((angle * Math.PI) / 180);
   }
 
-  // 이 메서드도 어디에 있는지 알 수 없으므로 추가해야 합니다.
   sin(angle) {
     return Math.sin((angle * Math.PI) / 180);
   }
