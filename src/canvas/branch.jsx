@@ -4,7 +4,7 @@ export class Branch {
     this.startY = startY;
     this.endX = endX;
     this.endY = endY;
-    this.color = "white";
+    this.color = "#f5f8ff";
     this.lineWidth = lineWidth;
 
     this.frame = 300;
