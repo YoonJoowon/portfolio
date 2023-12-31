@@ -6,6 +6,9 @@ const Nav = () => {
     <>
       <ComponentBox>
         <Component>Home</Component>
+        <Component>Project</Component>
+        <Component>About</Component>
+        <Component>Contect</Component>
       </ComponentBox>
     </>
   );
@@ -23,8 +26,9 @@ const fadeIn = keyframes`
 `;
 
 const ComponentBox = styled.div`
-  position: fixed;
   position: absolute;
+  right: 10%;
+  top: 30%;
 `;
 
 const Component = styled.div`
@@ -39,6 +43,7 @@ const Component = styled.div`
   color: white;
   opacity: 0.1;
   border-radius: 100%;
+  margin-top: 25px;
 
   font-size: 16px;
   background: rgba(0, 0, 0, 0.5);
