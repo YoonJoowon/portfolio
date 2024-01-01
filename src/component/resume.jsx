@@ -6,9 +6,11 @@ import resumeImg from "../asset/resume.png";
 const Resume = () => {
   return (
     <>
-      <ResumeImgBox>
-        <ResumeImg src={resumeImg}></ResumeImg>
-      </ResumeImgBox>
+      <Link to="/Project">
+        <ResumeImgBox>
+          <ResumeImg src={resumeImg}></ResumeImg>
+        </ResumeImgBox>
+      </Link>
     </>
   );
 };
