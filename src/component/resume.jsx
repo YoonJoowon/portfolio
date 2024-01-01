@@ -1,42 +1,19 @@
 import React from "react";
 import { styled, keyframes } from "styled-components";
-import CanvasTree from "../canvas/canvasTree.jsx";
 import { Link } from "react-router-dom";
+import resumeImg from "../asset/resume.png";
 
-const Landing = () => {
+const Resume = () => {
   return (
     <>
-      <CanvasTreeContainer>
-        <CanvasTree />
-      </CanvasTreeContainer>
-      <Background>
-        <TextBox>
-          <Link to="/About">
-            <Title>
-              안녕하세요! <br />
-              프론트엔드 개발자 윤주원입니다.
-            </Title>
-          </Link>
-        </TextBox>
-      </Background>
+      <ResumeImgBox>
+        <ResumeImg src={resumeImg}></ResumeImg>
+      </ResumeImgBox>
     </>
   );
 };
 
-export default Landing;
-const CanvasTreeContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-`;
-
-const Background = styled.div`
-  width: 100%;
-  height: 100%;
-`;
+export default Resume;
 
 const fadeIn = keyframes`
   from {
@@ -47,19 +24,16 @@ const fadeIn = keyframes`
   }
 `;
 
-const TextBox = styled.div`
+const ResumeImgBox = styled.div`
   position: absolute;
-  top: 45%;
-  left: 15%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  a {
-    text-decoration: none;
-  }
 `;
 
-const Title = styled.div`
-  width: 400px;
-  padding: 30px;
+const ResumeImg = styled.img`
+  width: 60%;
+  padding: 7px;
   color: white;
   opacity: 0.1;
   animation: ${fadeIn} 3s ease-in-out forwards;
