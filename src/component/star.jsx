@@ -34,8 +34,8 @@ const Background = styled.div`
 
   .night {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 150vw;
+    height: 150vh;
     transform: rotateZ(35deg);
     z-index: -1;
   }
