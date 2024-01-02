@@ -36,6 +36,7 @@ const Landing = () => {
 };
 
 export default Landing;
+
 const CanvasTreeContainer = styled.div`
   position: absolute;
   top: 0;
