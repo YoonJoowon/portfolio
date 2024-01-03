@@ -20,10 +20,14 @@ const Contact = () => {
           </Text>
           <Text>전화번호 : +82 010 4325 6224</Text>
           <a href="mailto:ysw6963@gmail.com">
-            <Text>이메일 : ysw6963@gmail.com</Text>
+            <Text>
+              이메일 : <span>ysw6963@gmail.com</span>
+            </Text>
           </a>
           <a href="https://github.com/YoonJoowon">
-            <Text>Github : https://github.com/YoonJoowon</Text>
+            <Text>
+              Github : <span>https://github.com/YoonJoowon</span>
+            </Text>
           </a>
         </TextBox>
       </Background>
@@ -124,7 +128,7 @@ const Text = styled.div`
   margin: 20px;
   margin-top: 40px;
 
-  a {
+  span {
     color: #b7ceff;
     text-decoration: none;
   }
