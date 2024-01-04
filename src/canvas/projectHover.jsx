@@ -19,45 +19,48 @@ const ProjectHover = () => {
     return point.matrixTransform(svg.getScreenCTM().inverse());
   };
 
-  const Item = ({ item, index }) => {
-    const update = (c) => {
-      const clip = document.querySelector(`#clip-${index} circle`);
-      clip.setAttribute("cx", c.x);
-      clip.setAttribute("cy", c.y);
-    };
+  const updateClipPath = (index, c) => {
+    const clip = document.querySelector(`#clip-${index} circle`);
+    clip.setAttribute("cx", c.x);
+    clip.setAttribute("cy", c.y);
+  };
 
+  const Item = ({ item, index }) => {
     const mouseMoveHandler = (e) => {
-      update(getCoordinates(e, svgRef.current));
+      const coordinates = getCoordinates(e, svgRef.current);
+      updateClipPath(index, coordinates);
     };
 
     const touchMoveHandler = (e) => {
       e.preventDefault();
       const touch = e.targetTouches[0];
-      if (touch) return update(getCoordinates(touch, svgRef.current));
+      if (touch) {
+        const coordinates = getCoordinates(touch, svgRef.current);
+        updateClipPath(index, coordinates);
+      }
     };
 
     return (
-      <div
-        className="item"
+      <ItemContainer
         onMouseMove={mouseMoveHandler}
         onTouchMove={touchMoveHandler}
       >
-        <svg
+        <StyledSVG
           viewBox="0 0 300 200"
           preserveAspectRatio="xMidYMid slice"
           ref={svgRef}
         >
-          <g>
-            <circle id={`clip-${index}`} cx="0" cy="0" r="20" fill="#fff" />
-            <image
-              xlinkHref={item.i}
-              width="100%"
-              height="100%"
-              clipPath={`url(#clip-${index})`}
-            />
-          </g>
-        </svg>
-      </div>
+          <clipPath id={`clip-${index}`}>
+            <circle cx="0" cy="0" r="100" fill="#fff" />
+          </clipPath>
+          <StyledImage
+            xlinkHref={item.i}
+            width="100%"
+            height="100%"
+            clipPath={`url(#clip-${index})`}
+          />
+        </StyledSVG>
+      </ItemContainer>
     );
   };
 
@@ -76,8 +79,6 @@ const ProjectHover = () => {
     </Container>
   );
 };
-
-export default ProjectHover;
 
 const Container = styled.div`
   max-width: 1200px;
@@ -99,40 +100,30 @@ const Main = styled.main`
     flex-flow: row wrap;
     justify-content: center;
   }
+`;
 
-  .item {
-    overflow: hidden; 
-    position: relative; 
-    transition: transform 0.3s, opacity 0.3s; 
-  }
+const ItemContainer = styled.div`
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s, opacity 0.3s;
 
-  .item:hover circle {
+  &:hover circle {
     transform: scale(1);
   }
 
-  .item:hover image {
+  &:hover image {
     opacity: 1;
   }
 `;
 
-const Options = styled.div`
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  button {
-    width: 100px;
-    height: 100px;
-    margin-left: 0.5rem;
-  }
+const StyledSVG = styled.svg`
+  width: 100%;
+  height: 100%;
 `;
 
-const Button = styled.button`
-  width: 12px;
-  height: 12px;
-  border: none;
-  appearance: none;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
-  border-radius: 1px;
-  background-color: black;
-  color: white;
+const StyledImage = styled.image`
+  width: 100%;
+  height: 100%;
 `;
+
+export default ProjectHover;
