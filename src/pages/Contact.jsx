@@ -1,12 +1,12 @@
 import React from "react";
 import { styled, keyframes } from "styled-components";
-import CanvasTree from "../canvas/canvasTree.jsx";
+import CanvasBackground from "../canvas/canvasBackground.jsx";
 
 const Contact = () => {
   return (
     <>
       <CanvasTreeContainer>
-        <CanvasTree />
+        <CanvasBackground />
       </CanvasTreeContainer>
       <Background>
         <TextBox>
@@ -64,7 +64,7 @@ const TextBox = styled.div`
   animation: ${fadeIn} 3s ease-in-out forwards;
   position: absolute;
   top: 50%;
-  left: 15%;
+  left: 30%;
   transform: translate(-50%, -50%);
   a {
     text-decoration: none;
@@ -72,7 +72,7 @@ const TextBox = styled.div`
 `;
 
 const Title = styled.div`
-  width: 400px;
+  width: 600px;
   padding: 30px;
   color: white;
   font-size: 2rem;
@@ -116,7 +116,7 @@ const Title = styled.div`
 `;
 
 const Text = styled.div`
-  width: 400px;
+  width: 600px;
   padding: 30px;
   color: white;
   font-size: 1rem;
