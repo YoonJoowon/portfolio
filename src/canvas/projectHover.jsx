@@ -1,129 +1,148 @@
-import React, { useRef } from "react";
+import React from "react";
 import styled from "styled-components";
-import ailolmooncheolImage from "../asset/ailolmooncheol.png";
+import AIlolmooncheol from "../asset/ailolmooncheol.png";
 
-const itemsData = [
-  { t: "X-rays", i: ailolmooncheolImage },
-  { t: "X-rays", i: ailolmooncheolImage },
-  { t: "X-rays", i: ailolmooncheolImage },
-  { t: "X-rays", i: ailolmooncheolImage },
-];
-
-const ProjectHover = () => {
-  const svgRef = useRef();
-
-  const getCoordinates = (e, svg) => {
-    const point = svg.createSVGPoint();
-    point.x = e.clientX;
-    point.y = e.clientY;
-    return point.matrixTransform(svg.getScreenCTM().inverse());
-  };
-
-  const updateClipPath = (index, c) => {
-    const clip = document.querySelector(`#clip-${index} circle`);
-    clip.setAttribute("cx", c.x);
-    clip.setAttribute("cy", c.y);
-  };
-
-  const Item = ({ item, index }) => {
-    const mouseMoveHandler = (e) => {
-      const coordinates = getCoordinates(e, svgRef.current);
-      updateClipPath(index, coordinates);
-    };
-
-    const touchMoveHandler = (e) => {
-      e.preventDefault();
-      const touch = e.targetTouches[0];
-      if (touch) {
-        const coordinates = getCoordinates(touch, svgRef.current);
-        updateClipPath(index, coordinates);
-      }
-    };
-
-    return (
-      <ItemContainer
-        onMouseMove={mouseMoveHandler}
-        onTouchMove={touchMoveHandler}
-      >
-        <StyledSVG
-          viewBox="0 0 300 200"
-          preserveAspectRatio="xMidYMid slice"
-          ref={svgRef}
-        >
-          <clipPath id={`clip-${index}`}>
-            <circle cx="0" cy="0" r="100" fill="#fff" />
-          </clipPath>
-          <StyledImage
-            xlinkHref={item.i}
-            width="100%"
-            height="100%"
-            clipPath={`url(#clip-${index})`}
-          />
-        </StyledSVG>
-      </ItemContainer>
-    );
-  };
-
+const ProjectCard = ({ imageSrc, title, description }) => {
   return (
-    <Container>
-      <Header>
-        <h1>SVG 클립 패스 호버 효과</h1>
-      </Header>
-      <Main>
-        <div className="items">
-          {itemsData.map((item, index) => (
-            <Item key={index} item={item} index={index} />
-          ))}
-        </div>
-      </Main>
-    </Container>
+    <StyledProjectCard>
+      <img src={imageSrc} alt="Project" />
+      <figcaption>
+        <h2>
+          If your <span>knees</span> aren't
+        </h2>
+        <p>{description}</p>
+      </figcaption>
+    </StyledProjectCard>
   );
 };
 
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  background-color: black;
-  color: white;
-  position: absolute;
-`;
+const ProjectHover = () => {
+  const projects = [
+    { imageSrc: AIlolmooncheol, description: "Description 1" },
+    { imageSrc: AIlolmooncheol, description: "Description 2" },
+    { imageSrc: AIlolmooncheol, description: "Description 3" },
+    { imageSrc: AIlolmooncheol, description: "Description 4" },
+  ];
 
-const Header = styled.header`
-  text-align: center;
-  padding-bottom: 3rem;
-`;
-
-const Main = styled.main`
-  .items {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-  }
-`;
-
-const ItemContainer = styled.div`
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.3s, opacity 0.3s;
-
-  &:hover circle {
-    transform: scale(1);
-  }
-
-  &:hover image {
-    opacity: 1;
-  }
-`;
-
-const StyledSVG = styled.svg`
-  width: 100%;
-  height: 100%;
-`;
-
-const StyledImage = styled.image`
-  width: 100%;
-  height: 100%;
-`;
+  return (
+    <StyledProjectHover>
+      {projects.map((project, index) => (
+        <ProjectCard key={index} {...project} />
+      ))}
+    </StyledProjectHover>
+  );
+};
 
 export default ProjectHover;
+
+const StyledProjectHover = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  margin: 10px;
+`;
+
+const StyledProjectCard = styled.figure`
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  min-width: 220px;
+  max-width: 400px;
+  max-height: 230px;
+  width: 100%;
+  background: #000000;
+  text-align: center;
+  display: flex;
+  cursor: pointer;
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  img {
+    opacity: 1;
+    width: 100%;
+    transition: opacity 0.35s;
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 3em;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      bottom: 50%;
+      left: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+      content: "";
+      opacity: 0;
+      background-color: #ffffff;
+      transition: all 0.4s;
+      transition-delay: 0.6s;
+    }
+
+    h2,
+    p {
+      margin: 0 0 5px;
+      opacity: 0;
+      transition: opacity 0.35s, transform 0.35s;
+    }
+
+    h2 {
+      word-spacing: -0.15em;
+      font-weight: 300;
+      text-transform: uppercase;
+      transform: translate3d(0%, 50%, 0);
+      transition-delay: 0.3s;
+
+      span {
+        font-weight: 800;
+      }
+    }
+
+    p {
+      font-weight: 200;
+      transition-delay: 0s;
+    }
+
+    a {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      color: #ffffff;
+    }
+  }
+
+  &:hover img {
+    opacity: 0.35;
+  }
+
+  &:hover figcaption h2 {
+    opacity: 1;
+    transform: translate3d(0%, 0%, 0);
+    transition-delay: 0.3s;
+  }
+
+  &:hover figcaption p {
+    opacity: 0.9;
+    transition-delay: 0.6s;
+  }
+
+  &:hover figcaption::before {
+    background: rgba(255, 255, 255, 0);
+    top: 30px;
+    bottom: 30px;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+`;
