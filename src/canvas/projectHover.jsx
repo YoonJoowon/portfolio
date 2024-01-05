@@ -4,18 +4,23 @@ import AIlolmooncheol from "../asset/ailolmooncheol.png";
 import cus from "../asset/4cus.png";
 import metabus from "../asset/metabus.jpg";
 import matrip from "../asset/matrip.png";
+import { Link } from "react-router-dom";
 
-const ProjectCard = ({ imageSrc, title, description }) => {
+const ProjectCard = ({ imageSrc, title, description, projectId }) => {
+  const projectPath = `/Project/${projectId}`;
+
   return (
-    <StyledProjectCard>
-      <img src={imageSrc} alt="Project" />
-      <figcaption>
-        <h2>
-          <span>{title}</span>
-        </h2>
-        <p>{description}</p>
-      </figcaption>
-    </StyledProjectCard>
+    <Link to={projectPath}>
+      <StyledProjectCard>
+        <img src={imageSrc} alt="Project" />
+        <figcaption>
+          <h2>
+            <span>{title}</span>
+          </h2>
+          <p>{description}</p>
+        </figcaption>
+      </StyledProjectCard>
+    </Link>
   );
 };
 
@@ -55,7 +60,7 @@ const ProjectHover = () => {
       <StyledProjectHover>
         <ProjectPageTitle>Project</ProjectPageTitle>
         {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <ProjectCard key={index} {...project} projectId={index} />
         ))}
       </StyledProjectHover>
     </>
