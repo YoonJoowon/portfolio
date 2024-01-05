@@ -1,6 +1,9 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import AIlolmooncheol from "../asset/ailolmooncheol.png";
+import cus from "../asset/4cus.png";
+import metabus from "../asset/metabus.jpg";
+import matrip from "../asset/matrip.png";
 
 const ProjectCard = ({ imageSrc, title, description }) => {
   return (
@@ -22,24 +25,24 @@ const ProjectHover = () => {
       imageSrc: AIlolmooncheol,
       title: "AI 롤문철",
       description:
-        "리그오브레전드 게임 분쟁 상황에서의 과실을 판단해주고 플레이 피드백을 내려주는 AI 웹서비스",
+        "리그오브레전드 게임 분쟁 상황에서의 과실을 판단해주는 AI 웹서비스",
       detail: "Description 1",
     },
     {
-      imageSrc: AIlolmooncheol,
+      imageSrc: matrip,
       title: "메이트립",
       description: "여행을 함께 즐길 수 있는 친구 만들기 서비스",
       detail: "Description 1",
     },
     {
-      imageSrc: AIlolmooncheol,
+      imageSrc: cus,
       title: "4CUS",
       description:
-        "인생네컷 사진을 꾸미고 앨범을 만들어 저장할 수 있도록 도아주는 서비스",
+        "인생네컷 사진을 꾸미고 앨범을 만들어 저장할 수 있도록 도와주는 서비스",
       detail: "Description 1",
     },
     {
-      imageSrc: AIlolmooncheol,
+      imageSrc: metabus,
       title: "그 외 활동",
       description:
         "Three.js 를 활용한 메타버스 미니 프로젝트 및 NEORDINARY 행사 발표",
@@ -71,27 +74,32 @@ const fadeIn = keyframes`
 `;
 
 const ProjectPageTitle = styled.div`
-  color: white;
+  color: #ffffff;
   position: absolute;
   top: -15%;
-  
-  font-size: 2rem;
+  width: 400px;
+  height: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
   z-index: 1;
 `;
 
 const StyledProjectHover = styled.div`
+  animation: ${fadeIn} 3s ease-in-out forwards;
   display: flex;
   flex-wrap: wrap;
-  width: 60%;
+  width: 1200px;
   top: 20%;
   left: 10%;
-  gap: 10px;
   justify-content: space-around;
   position: absolute;
 `;
 
 const StyledProjectCard = styled.figure`
-  animation: ${fadeIn} 3s ease-in-out forwards;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -103,7 +111,11 @@ const StyledProjectCard = styled.figure`
   text-align: center;
   display: flex;
   margin-top: 50px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   cursor: pointer;
 
   * {
@@ -111,9 +123,10 @@ const StyledProjectCard = styled.figure`
   }
 
   img {
-    opacity: 1;
-    max-width: 100%;
     height: auto;
+    opacity: 1;
+    min-width: 110%;
+    max-width: 110%;
     transition: opacity 0.35s;
   }
 
@@ -160,22 +173,15 @@ const StyledProjectCard = styled.figure`
     }
 
     p {
-      font-weight: 200;
+      font-weight: 400;
       transition-delay: 0s;
-    }
-
-    a {
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      position: absolute;
-      color: #ffffff;
+      margin-top: 20px;
+      line-height: 1.4;
     }
   }
 
   &:hover img {
-    opacity: 0.35;
+    opacity: 0.2;
   }
 
   &:hover figcaption h2 {
