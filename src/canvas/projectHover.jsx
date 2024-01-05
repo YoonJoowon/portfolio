@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import AIlolmooncheol from "../asset/ailolmooncheol.png";
 
 const ProjectCard = ({ imageSrc, title, description }) => {
@@ -8,7 +8,7 @@ const ProjectCard = ({ imageSrc, title, description }) => {
       <img src={imageSrc} alt="Project" />
       <figcaption>
         <h2>
-          If your <span>knees</span> aren't
+          <span>{title}</span>
         </h2>
         <p>{description}</p>
       </figcaption>
@@ -18,32 +18,80 @@ const ProjectCard = ({ imageSrc, title, description }) => {
 
 const ProjectHover = () => {
   const projects = [
-    { imageSrc: AIlolmooncheol, description: "Description 1" },
-    { imageSrc: AIlolmooncheol, description: "Description 2" },
-    { imageSrc: AIlolmooncheol, description: "Description 3" },
-    { imageSrc: AIlolmooncheol, description: "Description 4" },
+    {
+      imageSrc: AIlolmooncheol,
+      title: "AI 롤문철",
+      description:
+        "리그오브레전드 게임 분쟁 상황에서의 과실을 판단해주고 플레이 피드백을 내려주는 AI 웹서비스",
+      detail: "Description 1",
+    },
+    {
+      imageSrc: AIlolmooncheol,
+      title: "메이트립",
+      description: "여행을 함께 즐길 수 있는 친구 만들기 서비스",
+      detail: "Description 1",
+    },
+    {
+      imageSrc: AIlolmooncheol,
+      title: "4CUS",
+      description:
+        "인생네컷 사진을 꾸미고 앨범을 만들어 저장할 수 있도록 도아주는 서비스",
+      detail: "Description 1",
+    },
+    {
+      imageSrc: AIlolmooncheol,
+      title: "그 외 활동",
+      description:
+        "Three.js 를 활용한 메타버스 미니 프로젝트 및 NEORDINARY 행사 발표",
+      detail: "Description 1",
+    },
   ];
 
   return (
-    <StyledProjectHover>
-      {projects.map((project, index) => (
-        <ProjectCard key={index} {...project} />
-      ))}
-    </StyledProjectHover>
+    <>
+      <StyledProjectHover>
+        <ProjectPageTitle>Project</ProjectPageTitle>
+        {projects.map((project, index) => (
+          <ProjectCard key={index} {...project} />
+        ))}
+      </StyledProjectHover>
+    </>
   );
 };
 
 export default ProjectHover;
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const ProjectPageTitle = styled.div`
+  color: white;
+  position: absolute;
+  top: -15%;
+  
+  font-size: 2rem;
+  z-index: 1;
+`;
+
 const StyledProjectHover = styled.div`
-  width: 90%;
   display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  top: 20%;
+  left: 10%;
+  gap: 10px;
   justify-content: space-around;
   position: absolute;
-  margin: 10px;
 `;
 
 const StyledProjectCard = styled.figure`
+  animation: ${fadeIn} 3s ease-in-out forwards;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -54,15 +102,18 @@ const StyledProjectCard = styled.figure`
   background: #000000;
   text-align: center;
   display: flex;
+  margin-top: 50px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
   cursor: pointer;
 
   * {
     box-sizing: border-box;
   }
-  
+
   img {
     opacity: 1;
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     transition: opacity 0.35s;
   }
 

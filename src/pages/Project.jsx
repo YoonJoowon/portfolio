@@ -10,7 +10,7 @@ const Project = () => {
         <CanvasBackground />
       </CanvasTreeContainer>
       <Background>
-        <ProjectHover />
+        <ProjectHover></ProjectHover>
       </Background>
     </>
   );
