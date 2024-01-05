@@ -1,26 +1,32 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { styled, keyframes } from "styled-components";
 
 const Star = () => {
-  return (
-    <Background>
-      <div className="night">
-        {[...Array(50)].map((_, index) => (
-          <div
-            key={index}
-            className="shooting_star"
-            style={{
-              animationDelay: `${Math.random() * 5000}ms`,
-              top: `${Math.random() * 200 - 30}%`,
-              left: `${Math.random() * 100}%`,
-            }}
-          ></div>
-        ))}
-      </div>
-    </Background>
-  );
-};
+  const location = useLocation();
 
+  if (!location.pathname.startsWith("/Project/")) {
+    return (
+      <Background>
+        <div className="night">
+          {[...Array(50)].map((_, index) => (
+            <div
+              key={index}
+              className="shooting_star"
+              style={{
+                animationDelay: `${Math.random() * 5000}ms`,
+                top: `${Math.random() * 200 - 30}%`,
+                left: `${Math.random() * 100}%`,
+              }}
+            ></div>
+          ))}
+        </div>
+      </Background>
+    );
+  } else {
+    return null;
+  }
+};
 export default Star;
 
 const shootingTime = "3000ms";
