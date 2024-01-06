@@ -35,7 +35,7 @@ const fadeIn = keyframes`
 `;
 
 const ComponentBox = styled.div`
-  position: absolute;
+  position: fixed;
   right: 10%;
   top: 30%;
 `;

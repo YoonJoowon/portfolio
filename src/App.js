@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import Star from "./component/star";
-import ProjectAilolmooncheol from "./pages/ProjectCus";
+import ProjectAilolmooncheol from "./pages/ProjectAilolmooncheol";
 import ProjectCus from "./pages/ProjectCus";
 import ProjectOther from "./pages/ProjectOther";
 import ProjectMatrip from "./pages/ProjectMatrip";
