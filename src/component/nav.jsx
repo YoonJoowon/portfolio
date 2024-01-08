@@ -38,6 +38,7 @@ const ComponentBox = styled.div`
   position: fixed;
   right: 10%;
   top: 30%;
+  z-index: 1;
 `;
 
 const Component = styled.div`

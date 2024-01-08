@@ -14,7 +14,6 @@ const ProjectAilolmooncheol = () => {
       <Background>
         <Img src={lolmoonceol}></Img>
         <Img src={lolmoonceol2}></Img> 
-        {/* 책장 넘어가는 효과? */}
       </Background>
     </>
   );
