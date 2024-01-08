@@ -84,6 +84,7 @@ const ProjectPageTitle = styled.div`
   top: -15%;
   width: 400px;
   height: 40px;
+  display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
