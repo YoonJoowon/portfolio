@@ -13,7 +13,7 @@ const ProjectAilolmooncheol = () => {
       </CanvasTreeContainer>
       <Background>
         <Img src={lolmoonceol}></Img>
-        <Img src={lolmoonceol2}></Img> 
+        <Img src={lolmoonceol2}></Img>
       </Background>
     </>
   );
@@ -32,16 +32,13 @@ const CanvasTreeContainer = styled.div`
 
 const Background = styled.div`
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Img = styled.img`
-  width: 1400px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  margin-left: 100px;
-  border-bottom: 1px solid black
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
