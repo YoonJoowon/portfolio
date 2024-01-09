@@ -11,11 +11,11 @@ const About = () => {
       </CanvasTreeContainer>
       <Resume />
       <TextBox>
-        <Text animationDelay="0s">
+        <Text>
           <span>● React</span>를 사용하며 컴포넌트화를 합리적인 방식으로
           분리하는 데에 능숙합니다.
         </Text>
-        <Text animationDelay="0.5s">
+        <Text $animationDelay="0.5s">
           <span>
             ● Redux-toolkit, Recoil
             <br />
@@ -23,7 +23,7 @@ const About = () => {
           상태를 효과적으로 관리하고 유지보수에 용이한 코드를 작성할 수
           있습니다.
         </Text>
-        <Text animationDelay="1s">
+        <Text $animationDelay="1s">
           <span>
             ● Styled components <br />
           </span>
@@ -31,21 +31,21 @@ const About = () => {
           상태에 따라 동적으로 스타일을 변경하여 사용자 경험을 향상시킬 수
           있습니다.
         </Text>
-        <Text animationDelay="1.5s">
+        <Text $animationDelay="1.5s">
           <span>
             ● Typescript <br />
           </span>
           프로젝트 진행시 TypeScript를 도입하여 코드의 안정성을 향상시켰습니다.
           정적 타이핑을 통해 개발 초기에 버그를 사전에 방지할 수 있습니다.
         </Text>
-        <Text animationDelay="2s">
+        <Text $animationDelay="2s">
           <span>
             ● Firebase <br />
           </span>
           Firebase Storage를 통해 데이터를 관리했습니다. Firebase Hosting을
           사용하여 빠르게 웹을 배포했습니다.
         </Text>
-        <Text animationDelay="2.5s">
+        <Text $animationDelay="2.5s">
           <span>
             ● Git, Jira, Notion <br />
           </span>
@@ -101,11 +101,11 @@ const Text = styled.div`
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   margin-top: 24px;
 
+  animation: ${TextFadeIn} 0.5s ease-in-out forwards;
+  animation-delay: ${({ $animationDelay }) => $animationDelay || "0s"};
+  opacity: 0;
+
   span {
     color: #b7ceff;
   }
-
-  animation: ${TextFadeIn} 0.5s ease-in-out forwards;
-  animation-delay: ${(props) => props.animationDelay || "0s"};
-  opacity: 0;
 `;
