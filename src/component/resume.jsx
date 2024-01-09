@@ -27,12 +27,15 @@ const fadeIn = keyframes`
 `;
 
 const ResumeImgBox = styled.div`
-  /* position: absolute;
-  top: 10%;
-  left: 10%; */
+  width: 550px;
+
+  @media (max-width: 850px) {
+    width: 80%;
+  }
 
   @media (max-width: 768px) {
-    display: none;
+    margin-top: 100px;
+    width: 500px;
   }
 `;
 
@@ -46,6 +49,10 @@ const ResumeImg = styled.img`
   margin: 20px;
   position: relative;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    margin: auto;
+  }
 
   /* 박스 내부의 요소들에 대한 스타일 */
   &::before,

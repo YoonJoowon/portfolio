@@ -88,20 +88,26 @@ const ResumeBox = styled.div`
   left: 10%;
   width: 1200px;
   height: 100%;
+  margin-left: 100px;
+
+  @media (max-width: 1600px) {
+    margin-left: 0px;
+  }
+
+  @media (max-width: 1480px) {
+    width: 80%;
+  }
 `;
 
 const TextBox = styled.div`
-  /* position: absolute;
-  top: 48%;
-  right: 14%;
-  transform: translate(-50%, -50%); */
+  margin-left: 100px;
 
   a {
     text-decoration: none;
   }
 
-  @media (max-width: 768px) {
-    margin: auto;
+  @media (max-width: 1480px) {
+    display: none;
   }
 `;
 
