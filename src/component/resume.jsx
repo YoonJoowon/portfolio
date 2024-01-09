@@ -27,23 +27,21 @@ const fadeIn = keyframes`
 `;
 
 const ResumeImgBox = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-70%, -50%);
+  /* position: absolute;
+  top: 10%;
+  left: 10%; */
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const ResumeImg = styled.img`
-  width: 60%;
+  width: 100%;
   padding: 7px;
-  color: white;
   opacity: 0.1;
   animation: ${fadeIn} 3s ease-in-out forwards;
 
-  font-size: 1.6rem;
-  line-height: 2;
-  text-align: left;
-  background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   margin: 20px;
   position: relative;

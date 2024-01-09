@@ -63,19 +63,17 @@ const fadeIn = keyframes`
 const TextBox = styled.div`
   animation: ${fadeIn} 3s ease-in-out forwards;
   position: absolute;
-  padding: 200px 0px 0px 100px;
+  top: 15%;
+  left: 5%;
 
   a {
     text-decoration: none;
   }
 
-  @media (max-width: 1050px) {
-    text-align: center;
-    margin: auto;
-  }
-
   @media (max-width: 768px) {
     padding: 200px 0px 0px 0px;
+    top: 0%;
+    left: 0%;
   }
 `;
 
@@ -129,6 +127,14 @@ const Title = styled.div`
     margin-bottom: 80px;
     font-size: 1.2rem;
   }
+
+  @media (max-width: 500px) {
+    width: 80%;
+    padding: 15px;
+    margin: auto;
+    margin-bottom: 80px;
+    font-size: 0.9rem;
+  }
 `;
 
 const Text = styled.div`
@@ -151,5 +157,13 @@ const Text = styled.div`
     margin-bottom: 40px;
     padding: 15px;
     font-size: 1.2rem;
+  }
+
+  @media (max-width: 500px) {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 15px;
+    font-size: 0.9rem;
   }
 `;
