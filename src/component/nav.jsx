@@ -39,6 +39,16 @@ const ComponentBox = styled.div`
   right: 10%;
   top: 30%;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    font-size: 1.2rem;
+    position: absolute;
+    display: flex;
+    margin: auto;
+    gap: 40px;
+    top: 5%;
+  }
 `;
 
 const Component = styled.div`
@@ -63,5 +73,10 @@ const Component = styled.div`
   &:hover {
     opacity: 1;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+
+  @media (max-width: 768px) {
+    /* margin: auto;
+    font-size: 1.2rem; */
   }
 `;
