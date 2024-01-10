@@ -38,6 +38,10 @@ const Background = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 768px) {
+    height: 130vh;
+  }
+
   .night {
     position: relative;
     width: 150vw;
