@@ -17,6 +17,6 @@ const StyledCanvas = styled.canvas`
   align-items: center;
 
   @media (max-width: 768px) {
-    height: 130vh;
+    height: 190vh;
   }
 `;

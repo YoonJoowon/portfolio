@@ -13,27 +13,29 @@ const Contact = () => {
           <a href="mailto:ysw6963@gmail.com">
             <Title>Contact</Title>
           </a>
-          <Text>
+          <Subtitle>
             프론트엔드 개발자 윤주원입니다. <br />
             자라나는 나무처럼 꾸준하게 성장하고, 제 강점과 노력을 바탕으로
             조직에 보탬이 되고 싶습니다.
-          </Text>
-          <Text>전화번호 : +82 010 4325 6224</Text>
-          <a href="mailto:ysw6963@gmail.com">
-            <Text>
-              이메일 : <span>ysw6963@gmail.com</span>
-            </Text>
-          </a>
-          <a href="https://github.com/YoonJoowon">
-            <Text>
-              Github : <span>https://github.com/YoonJoowon</span>
-            </Text>
-          </a>
-          <a href="https://velog.io/@wndnjs6224/posts">
-            <Text>
-              블로그 : <span>https://velog.io/@wndnjs6224/posts</span>
-            </Text>
-          </a>
+          </Subtitle>
+          <TextSubBox>
+            <a href="mailto:ysw6963@gmail.com">
+              <Text>
+                이메일 : <span>ysw6963@gmail.com</span>
+              </Text>
+            </a>
+            <a href="https://github.com/YoonJoowon">
+              <Text>
+                Github : <span>https://github.com/YoonJoowon</span>
+              </Text>
+            </a>
+            <a href="https://velog.io/@wndnjs6224/posts">
+              <Text>
+                블로그 : <span>https://velog.io/@wndnjs6224/posts</span>
+              </Text>
+            </a>
+            <Text>전화번호 : +82 010 4325 6224</Text>
+          </TextSubBox>
         </TextBox>
       </Background>
     </>
@@ -68,16 +70,22 @@ const fadeIn = keyframes`
 const TextBox = styled.div`
   animation: ${fadeIn} 3s ease-in-out forwards;
   position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(-50%, -50%);
+  top: 15%;
+  left: 5%;
+  width: 1500px;
   a {
     text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    padding: 200px 0px 0px 0px;
+    top: 0%;
+    left: 0%;
   }
 `;
 
 const Title = styled.div`
-  width: 600px;
+  width: 400px;
   padding: 30px;
   color: white;
   font-size: 2rem;
@@ -88,6 +96,11 @@ const Title = styled.div`
   margin: 20px;
   position: relative;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 60%;
+    margin: auto;
+  }
 
   /* 박스 내부의 요소들에 대한 스타일 */
   &::before,
@@ -120,8 +133,35 @@ const Title = styled.div`
   }
 `;
 
+const Subtitle = styled.div`
+  width: 900px;
+  padding: 30px;
+  color: white;
+  font-size: 1rem;
+  line-height: 2;
+  text-align: left;
+  background: rgba(27, 39, 53, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  margin: 20px;
+  margin-top: 40px;
+`;
+
+const TextSubBox = styled.div`
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+  }
+`;
+
 const Text = styled.div`
-  width: 600px;
+  width: 400px;
   padding: 30px;
   color: white;
   font-size: 1rem;
@@ -136,5 +176,11 @@ const Text = styled.div`
   span {
     color: #b7ceff;
     text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
   }
 `;
