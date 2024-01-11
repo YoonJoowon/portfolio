@@ -29,6 +29,11 @@ const Contact = () => {
               Github : <span>https://github.com/YoonJoowon</span>
             </Text>
           </a>
+          <a href="https://velog.io/@wndnjs6224/posts">
+            <Text>
+              블로그 : <span>https://velog.io/@wndnjs6224/posts</span>
+            </Text>
+          </a>
         </TextBox>
       </Background>
     </>

@@ -59,8 +59,6 @@ const ResumeImg = styled.img`
   &::after {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
     box-sizing: border-box;
     border: 2px solid rgba(255, 255, 255, 0.5);
     pointer-events: none;

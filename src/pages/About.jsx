@@ -84,10 +84,9 @@ const CanvasTreeContainer = styled.div`
 const ResumeBox = styled.div`
   display: flex;
   position: absolute;
-  top: 5%;
+  top: 3%;
   left: 10%;
   width: 1200px;
-  height: 100%;
   margin-left: 100px;
 
   @media (max-width: 1600px) {

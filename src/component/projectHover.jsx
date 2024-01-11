@@ -82,7 +82,6 @@ const StyledProjectHover = styled.div`
   animation: ${fadeIn} 3s ease-in-out forwards;
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: row; */
   width: 1200px;
   margin-top: 250px;
   left: 5%;
@@ -151,11 +150,6 @@ const StyledProjectCard = styled.figure`
   @media (max-width: 1480px) {
     width: 250px;
   }
-
-  /* @media (max-width: 950px) {
-    max-width: 200px;
-  } */
-
   * {
     box-sizing: border-box;
   }
@@ -163,8 +157,8 @@ const StyledProjectCard = styled.figure`
   img {
     height: auto;
     opacity: 1;
-    min-width: 110%;
-    max-width: 110%;
+    min-width: 100%;
+    max-width: 100%;
     transition: opacity 0.35s;
   }
 
