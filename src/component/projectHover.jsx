@@ -149,7 +149,13 @@ const StyledProjectCard = styled.figure`
 
   @media (max-width: 1480px) {
     width: 250px;
+    height: 250px;
   }
+
+  @media (max-width: 920px) {
+    height: 250px;
+  }
+
   * {
     box-sizing: border-box;
   }

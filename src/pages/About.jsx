@@ -96,6 +96,11 @@ const ResumeBox = styled.div`
   @media (max-width: 1480px) {
     width: 80%;
   }
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+  }
+
 `;
 
 const TextBox = styled.div`

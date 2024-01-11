@@ -36,4 +36,8 @@ const StyledCanvas = styled.canvas`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* @media (max-width: 768px) {
+    height: 130vh;
+  } */
 `;
