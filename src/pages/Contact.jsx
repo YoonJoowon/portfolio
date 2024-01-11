@@ -77,11 +77,6 @@ const TextBox = styled.div`
     text-decoration: none;
   }
 
-  @media (max-width: 768px) {
-    padding: 200px 0px 0px 0px;
-    top: 0%;
-    left: 0%;
-  }
 `;
 
 const Title = styled.div`
@@ -98,8 +93,9 @@ const Title = styled.div`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    width: 60%;
-    margin: auto;
+    width: 300px;
+    padding: 20px;
+    font-size: 1.4rem;
   }
 
   /* 박스 내부의 요소들에 대한 스타일 */
@@ -145,6 +141,21 @@ const Subtitle = styled.div`
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   margin: 20px;
   margin-top: 40px;
+
+  @media (max-width: 1280px) {
+    width: 700px;
+  }
+
+  @media (max-width: 1080px) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    width: 300px;
+    display: block;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
 `;
 
 const TextSubBox = styled.div`
@@ -156,7 +167,9 @@ const TextSubBox = styled.div`
     text-decoration: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
+    display: block;
+    flex-wrap: nowrap;
   }
 `;
 
@@ -178,9 +191,19 @@ const Text = styled.div`
     text-decoration: none;
   }
 
-  @media (max-width: 768px) {
-    width: 60%;
-    margin: auto;
-    margin-top: 40px;
+  @media (max-width: 1280px) {
+    width: 350px;
   }
+
+  @media (max-width: 1080px) {
+    width: 500px;
+  }
+
+  @media (max-width: 768px) {
+    width: 300px;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+
 `;
