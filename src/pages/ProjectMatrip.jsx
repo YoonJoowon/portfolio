@@ -3,6 +3,7 @@ import matrip from "../asset/projectFile/matrip.jpg";
 import matrip2 from "../asset/projectFile/matrip2.jpg";
 import matrip3 from "../asset/projectFile/matrip3.jpg";
 import matrip4 from "../asset/projectFile/matrip4.jpg";
+import ProjectNextBtn from "../component/projectNextBtn";
 import ProjectCommon from "./ProjectCommon";
 import styled from "styled-components";
 
@@ -32,7 +33,7 @@ const ProjectMatrip = () => {
           </Text>
         </TextBox>
       </ExplainBox>
-      <ExplainBox></ExplainBox>
+      <ProjectNextBtn></ProjectNextBtn>
     </>
   );
 };
@@ -46,7 +47,7 @@ const ExplainBox = styled.div`
   display: flex;
   padding: 20px;
   border-radius: 20px;
-  border: 2px solid #b7ceff;
+  border: 2px solid #1b2735;;
   font-family: "Pretendard", sans-serif;
   flex-direction: column;
 

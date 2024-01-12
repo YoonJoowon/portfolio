@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectCommon from "./ProjectCommon";
 import styled from "styled-components";
+import ProjectNextBtn from "../component/projectNextBtn";
 import lolmooncheol from "../asset/projectFile/lolmooncheol.jpg";
 import lolmooncheol2 from "../asset/projectFile/lolmooncheol2.jpg";
 import lolmooncheol4 from "../asset/projectFile/lolmooncheol4.jpg";
@@ -24,10 +25,7 @@ const ProjectAilolmooncheol = () => {
           <Img src={lolmooncheol5} />
         </ImgBox>
         <TextBox>
-          <Title>
-            ◦ 린스타트업 방식의 개발 및 분쟁 상황 과실 판단 순서 & 기능 개발
-            이유
-          </Title>
+          <Title>◦ 린스타트업 방식의 개발 & 분쟁 상황 과실 판단 순서</Title>
           <Text>
             1. 소환사 닉네임을 기입
             <br />
@@ -51,7 +49,7 @@ const ProjectAilolmooncheol = () => {
           <Img src={lolmooncheol7} />
         </ImgBox>
         <TextBox>
-          <Title>◦ 기능 개발 이유</Title>
+          <Title>◦ 린스타트업 방식의 개발</Title>
           <Text>
             판결 내용 입력 후 약 30초가 소요 됨에 따라 인터렉션을 초시계
             개발하였습니다.
@@ -75,7 +73,7 @@ const ProjectAilolmooncheol = () => {
           <Img src={lolmooncheol9} />
         </ImgBox>
         <TextBox>
-          <Title>◦ 기능 개발 이유</Title>
+          <Title>◦ 린스타트업 방식의 개발</Title>
           <Text>
             2번째 가설인 유저들의 판결 투표를 진행하기 위해 해당 기능들을
             개발하였습니다. DB와 연결하여 유저들의 판결내역 및 과실내용들을
@@ -91,7 +89,7 @@ const ProjectAilolmooncheol = () => {
           <Imgshame src={lolmooncheol11} />
         </ImgBox>
         <TextBox>
-          <Title>◦ 기능 개발 이유</Title>
+          <Title>◦ 린스타트업 방식의 개발</Title>
           <Text>
             1. 프로젝트 진행 도중 UI만을 제작하여 빠르게 사용자 VOC를 받기위해
             커뮤니티에 배포했습니다.
@@ -105,7 +103,7 @@ const ProjectAilolmooncheol = () => {
         </TextBox>
       </ExplainBox>
 
-      <ExplainBox></ExplainBox>
+      <ProjectNextBtn></ProjectNextBtn>
     </>
   );
 };
@@ -117,7 +115,7 @@ const ExplainBox = styled.div`
   display: flex;
   padding: 20px;
   border-radius: 20px;
-  border: 2px solid #b7ceff;
+  border: 1.5px solid #1b2735;;
   font-family: "Pretendard", sans-serif;
   /* flex-direction: column; */
 

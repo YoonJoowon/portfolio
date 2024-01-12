@@ -3,6 +3,7 @@ import cus from "../asset/projectFile/cus.jpg";
 import cus2 from "../asset/projectFile/cus2.jpg";
 import cus3 from "../asset/projectFile/cus3.jpg";
 import cus4 from "../asset/projectFile/cus4.jpg";
+import ProjectNextBtn from "../component/projectNextBtn";
 import ProjectCommon from "./ProjectCommon";
 import styled from "styled-components";
 
@@ -23,7 +24,10 @@ const ProjectCus = () => {
             해당 서비스를 개발하게 되면 얻는 것이 무엇인지 <br />
             해당 서비스가 다른 서비스와의 차별점이 있는지 <br />
           </Text>
-          <Text>위와 같은 질문의 포커스를 맞추어 팀원들과 토론하였습니다.</Text>
+          <Text>
+            위와 같은 질문에 포커스를 맞추어 팀원들과 프로젝트의 MVP 및 개발을
+            진행했습니다.
+          </Text>
         </TextBox>
       </ExplainBox>
       <ExplainBox>
@@ -41,12 +45,13 @@ const ProjectCus = () => {
             상기했습니다.
           </Text>
           <Text>
-            규칙, 팀의 목표, 개인의 목표, 가치, 활동, 위험성 등 소통을 진행했으며
-            팀원들의 니즈와 협동 및 프로젝트의 방향성에 대해 얘기했습니다.
+            규칙, 팀의 목표, 개인의 목표, 가치, 활동, 위험성 등 소통을
+            진행했으며 팀원들의 니즈와 협동 및 프로젝트의 방향성에 대해
+            얘기했습니다.
           </Text>
         </TextBox>
       </ExplainBox>
-      <ExplainBox></ExplainBox>
+      <ProjectNextBtn></ProjectNextBtn>
     </>
   );
 };
@@ -60,7 +65,7 @@ const ExplainBox = styled.div`
   display: flex;
   padding: 20px;
   border-radius: 20px;
-  border: 2px solid #b7ceff;
+  border: 2px solid #1b2735;;
   font-family: "Pretendard", sans-serif;
   /* flex-direction: column; */
 
