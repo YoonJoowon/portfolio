@@ -72,7 +72,8 @@ const TextBox = styled.div`
   position: absolute;
   top: 15%;
   left: 5%;
-  width: 1500px;
+  width: 1000px;
+
   a {
     text-decoration: none;
   }
@@ -159,7 +160,6 @@ const Subtitle = styled.div`
 `;
 
 const TextSubBox = styled.div`
-  width: 1000px;
   display: flex;
   flex-wrap: wrap;
 

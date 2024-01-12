@@ -84,7 +84,7 @@ const StyledProjectHover = styled.div`
   flex-wrap: wrap;
   width: 1200px;
   margin-top: 250px;
-  left: 5%;
+  left: 8%;
   justify-content: space-around;
   position: absolute;
 

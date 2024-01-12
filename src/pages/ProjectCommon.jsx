@@ -5,9 +5,6 @@ import CanvasBackground from "../canvas/canvasBackground";
 const ProjectCommon = ({ children, backgroundImage }) => {
   return (
     <>
-      <CanvasTreeContainer>
-        <CanvasBackground />
-      </CanvasTreeContainer>
       <Background>
         <Img src={backgroundImage} />
         {children}
