@@ -21,6 +21,7 @@ const ProjectAilolmooncheol = () => {
         <Img src={lolmooncheol4}></Img>
         <Img src={lolmooncheol5}></Img>
         <TextBox>
+          <Title>◦ 린스타트업 방식의 개발</Title>
           <Title>◦ 분쟁 상황 과실 판단 순서 & 기능 개발 이유</Title>
           <Text>
             1. 소환사 닉네임을 기입 <br /> 2. 시간과 위치 그리고 분쟁 내용을
@@ -43,6 +44,7 @@ const ProjectAilolmooncheol = () => {
         <Img src={lolmooncheol6}></Img>
         <Img src={lolmooncheol7}></Img>
         <TextBox>
+          <Title>◦ 기능 개발 이유</Title>
           <Text>
             판결 내용 입력 후 약 30초가 소요 됨에 따라 인터렉션을 초시계
             개발하였습니다.
@@ -65,6 +67,7 @@ const ProjectAilolmooncheol = () => {
         <Img src={lolmooncheol8}></Img>
         <Img src={lolmooncheol9}></Img>
         <TextBox>
+          <Title>◦ 기능 개발 이유</Title>
           <Text>
             2번째 가설인 유저들의 판결 투표를 진행하기 위해 해당 기능들을
             개발하였습니다.
@@ -81,9 +84,11 @@ const ProjectAilolmooncheol = () => {
         <Imgshame src={lolmooncheol11}></Imgshame>
       </ImgBox>
       <ImgBox>
+        <Title>◦ 기능 개발 이유</Title>
         <Text>
-          1. 프로젝트 진행 도중 UI만을 제작하여 빠르게 사용자 VOC를 받기위해 커뮤니티에
-          배포했습니다.(왼쪽 사진) <br />- 검증결과 인기글 1위에 등록되었습니다.
+          1. 프로젝트 진행 도중 UI만을 제작하여 빠르게 사용자 VOC를 받기위해
+          커뮤니티에 배포했습니다.(왼쪽 사진) <br />- 검증결과 인기글 1위에
+          등록되었습니다.
         </Text>
         <Text>
           2. Inflow, Churn, Retention 에 대한 지표를 확인하며 프로젝트를
@@ -92,9 +97,7 @@ const ProjectAilolmooncheol = () => {
           확인했습니다.
         </Text>
       </ImgBox>
-      <ImgBox>
-      
-      </ImgBox>
+      <ImgBox></ImgBox>
     </>
   );
 };
