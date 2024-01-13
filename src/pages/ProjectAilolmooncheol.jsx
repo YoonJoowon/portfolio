@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProjectCommon from "./ProjectCommon";
 import styled from "styled-components";
 import ProjectNextBtn from "../component/projectNextBtn";
@@ -12,8 +12,15 @@ import lolmooncheol8 from "../asset/projectFile/lolmooncheol8.jpg";
 import lolmooncheol9 from "../asset/projectFile/lolmooncheol9.jpg";
 import lolmooncheol10 from "../asset/projectFile/lolmooncheol10.jpg";
 import lolmooncheol11 from "../asset/projectFile/lolmooncheol11.jpg";
+import { Link } from "react-router-dom";
 
 const ProjectAilolmooncheol = () => {
+  const projectId = 0;
+  const projectPath = `/Project/${projectId + 1}`;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <>
       <ProjectCommon backgroundImage={lolmooncheol} />
@@ -102,8 +109,9 @@ const ProjectAilolmooncheol = () => {
           </Text>
         </TextBox>
       </ExplainBox>
-
-      <ProjectNextBtn></ProjectNextBtn>
+      <Link to={projectPath}>
+        <ProjectNextBtn nextTitle="----- Next Project" projectName="Matrip" />
+      </Link>
     </>
   );
 };
@@ -115,7 +123,7 @@ const ExplainBox = styled.div`
   display: flex;
   padding: 20px;
   border-radius: 20px;
-  border: 1.5px solid #1b2735;;
+  border: 1.5px solid #1b2735;
   font-family: "Pretendard", sans-serif;
   /* flex-direction: column; */
 

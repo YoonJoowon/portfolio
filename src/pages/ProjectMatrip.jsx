@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import matrip from "../asset/projectFile/matrip.jpg";
 import matrip2 from "../asset/projectFile/matrip2.jpg";
 import matrip3 from "../asset/projectFile/matrip3.jpg";
@@ -6,8 +6,15 @@ import matrip4 from "../asset/projectFile/matrip4.jpg";
 import ProjectNextBtn from "../component/projectNextBtn";
 import ProjectCommon from "./ProjectCommon";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const ProjectMatrip = () => {
+  const projectId = 1;
+  const projectPath = `/Project/${projectId + 1}`;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <ProjectCommon backgroundImage={matrip} />
@@ -33,7 +40,9 @@ const ProjectMatrip = () => {
           </Text>
         </TextBox>
       </ExplainBox>
-      <ProjectNextBtn></ProjectNextBtn>
+      <Link to={projectPath}>
+        <ProjectNextBtn nextTitle="----- Next Project" projectName="4CUS" />
+      </Link>
     </>
   );
 };

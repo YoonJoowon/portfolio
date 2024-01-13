@@ -1,26 +1,28 @@
 import React from "react";
-import { styled, keyframes } from "styled-components";
+import styled from "styled-components";
 
-const projectNextBtn = () => {
+const ProjectNextButton = ({ nextTitle, projectName }) => {
   return (
-    <>
+    <Container>
       <ExplainNextPage>
-        <NextTitle> ----- Next Project</NextTitle>
-    
-        <ProjectName>Matrip</ProjectName>
+        <NextTitle>{nextTitle}</NextTitle>
+        <ProjectName>{projectName}</ProjectName>
       </ExplainNextPage>
-    </>
+    </Container>
   );
 };
 
-export default projectNextBtn;
+const Container = styled.div`
+  width: 100%;
+  margin-top: 100px;
+`;
 
 const ExplainNextPage = styled.div`
+  display: flex;
   width: 100%;
   height: 200px;
-  border-radius: 40px 40px 0px 0px;
+  border-radius: 40px 40px 0 0;
   background-color: #1b2735;
-  margin-top: 100px;
 `;
 
 const NextTitle = styled.div`
@@ -39,7 +41,7 @@ const NextTitle = styled.div`
 
 const ProjectName = styled.div`
   width: 70%;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   color: white;
   font-weight: 600;
   font-size: 1rem;
@@ -50,7 +52,9 @@ const ProjectName = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    padding: 0px;
+    padding: 0;
     font-size: 0.9rem;
   }
 `;
+
+export default ProjectNextButton;

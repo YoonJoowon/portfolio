@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import cus from "../asset/projectFile/cus.jpg";
 import cus2 from "../asset/projectFile/cus2.jpg";
 import cus3 from "../asset/projectFile/cus3.jpg";
@@ -6,8 +6,15 @@ import cus4 from "../asset/projectFile/cus4.jpg";
 import ProjectNextBtn from "../component/projectNextBtn";
 import ProjectCommon from "./ProjectCommon";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const ProjectCus = () => {
+  const projectId = 2;
+  const projectPath = `/Project/${projectId + 1}`;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <>
       <ProjectCommon backgroundImage={cus} />
@@ -51,7 +58,9 @@ const ProjectCus = () => {
           </Text>
         </TextBox>
       </ExplainBox>
-      <ProjectNextBtn></ProjectNextBtn>
+      <Link to={projectPath}>
+        <ProjectNextBtn nextTitle="----- Next Project" projectName="Matrip" />
+      </Link>
     </>
   );
 };
@@ -65,7 +74,7 @@ const ExplainBox = styled.div`
   display: flex;
   padding: 20px;
   border-radius: 20px;
-  border: 2px solid #1b2735;;
+  border: 2px solid #1b2735;
   font-family: "Pretendard", sans-serif;
   /* flex-direction: column; */
 
