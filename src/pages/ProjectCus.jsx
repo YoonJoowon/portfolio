@@ -14,7 +14,7 @@ const ProjectCus = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   return (
     <>
       <ProjectCommon backgroundImage={cus} />
@@ -58,8 +58,11 @@ const ProjectCus = () => {
           </Text>
         </TextBox>
       </ExplainBox>
-      <Link to={projectPath}>
-        <ProjectNextBtn nextTitle="----- Next Project" projectName="Matrip" />
+      <Link to={projectPath} style={{ textDecoration: "none" }}>
+        <ProjectNextBtn
+          nextTitle="Next Project"
+          projectName="Other : WebGL, R3f를 통한 미니 프로젝트 개발 및 NEORDINARY 행사 참여 "
+        />
       </Link>
     </>
   );

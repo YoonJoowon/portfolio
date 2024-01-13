@@ -20,7 +20,7 @@ const ProjectAilolmooncheol = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   return (
     <>
       <ProjectCommon backgroundImage={lolmooncheol} />
@@ -109,8 +109,11 @@ const ProjectAilolmooncheol = () => {
           </Text>
         </TextBox>
       </ExplainBox>
-      <Link to={projectPath}>
-        <ProjectNextBtn nextTitle="----- Next Project" projectName="Matrip" />
+      <Link to={projectPath} style={{ textDecoration: "none" }}>
+        <ProjectNextBtn
+          nextTitle="Next Project"
+          projectName="Matrip : 여행을 함께 즐길 수 있는 친구 만들기 서비스 "
+        />
       </Link>
     </>
   );

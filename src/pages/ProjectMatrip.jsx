@@ -40,8 +40,11 @@ const ProjectMatrip = () => {
           </Text>
         </TextBox>
       </ExplainBox>
-      <Link to={projectPath}>
-        <ProjectNextBtn nextTitle="----- Next Project" projectName="4CUS" />
+      <Link to={projectPath} style={{ textDecoration: "none" }}>
+        <ProjectNextBtn
+          nextTitle="Next Project"
+          projectName="4CUS : 인생네컷 사진을 꾸미고 앨범을 만들어 저장할 수 있도록 도와주는 서비스 "
+        />
       </Link>
     </>
   );
@@ -56,7 +59,7 @@ const ExplainBox = styled.div`
   display: flex;
   padding: 20px;
   border-radius: 20px;
-  border: 2px solid #1b2735;;
+  border: 2px solid #1b2735;
   font-family: "Pretendard", sans-serif;
   flex-direction: column;
 

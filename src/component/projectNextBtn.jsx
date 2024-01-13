@@ -23,36 +23,58 @@ const ExplainNextPage = styled.div`
   height: 200px;
   border-radius: 40px 40px 0 0;
   background-color: #1b2735;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+`;
+
+const sharedStyles = `
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
 `;
 
 const NextTitle = styled.div`
+  ${sharedStyles}
   width: 400px;
   padding: 30px;
-  color: white;
   font-size: 1.3rem;
-  line-height: 2;
-  text-align: left;
   background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   margin: 20px;
   position: relative;
   cursor: pointer;
-`;
 
-const ProjectName = styled.div`
-  width: 70%;
-  padding: 10px 20px;
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 2;
-  text-align: left;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
 
   @media (max-width: 768px) {
     width: 100%;
-    padding: 0;
+    padding: 20px;
+    font-size: 1rem;
+  }
+`;
+
+const ProjectName = styled.div`
+  ${sharedStyles}
+  width: 70%;
+  padding: 30px;
+  font-size: 1.1rem;
+  line-height: 2;
+  text-align: left;
+  margin: 20px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 20px;
     font-size: 0.9rem;
   }
 `;
