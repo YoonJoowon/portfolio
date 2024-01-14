@@ -37,7 +37,11 @@ const StyledCanvas = styled.canvas`
   justify-content: center;
   align-items: center;
 
-  /* @media (max-width: 768px) {
-    height: 130vh;
-  } */
+  @media (max-width: 768px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 400px) {
+    height: 110vh;
+  }
 `;

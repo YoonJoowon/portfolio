@@ -15,6 +15,10 @@ const ProjectNextButton = ({ nextTitle, projectName }) => {
 const Container = styled.div`
   width: 100%;
   margin-top: 100px;
+
+  @media (max-width: 768px) {
+  margin-top: 50px;
+  }
 `;
 
 const ExplainNextPage = styled.div`

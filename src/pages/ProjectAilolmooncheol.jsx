@@ -120,7 +120,7 @@ const ProjectAilolmooncheol = () => {
 };
 
 const ExplainBox = styled.div`
-  width: 90%;
+  width: 80%;
   margin: auto;
   margin-top: 50px;
   display: flex;

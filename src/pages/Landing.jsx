@@ -71,7 +71,7 @@ const TextBox = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding: 200px 0px 0px 0px;
+    padding: 150px 0px 0px 0px;
     top: 0%;
     left: 0%;
   }

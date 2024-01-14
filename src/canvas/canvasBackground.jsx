@@ -8,6 +8,7 @@ function CanvasBackground() {
 
   return (
     <StyledCanvas
+      as="canvas"
       location={location}
       ref={canvasRef}
       width={1920}
@@ -18,7 +19,7 @@ function CanvasBackground() {
 
 export default CanvasBackground;
 
-const StyledCanvas = styled.canvas`
+const StyledCanvas = styled.div`
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   height: 100vh;
   width: 100vw;
@@ -27,7 +28,16 @@ const StyledCanvas = styled.canvas`
   align-items: center;
 
   @media (max-width: 768px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 678px) {
     height: ${(props) =>
-      props.location.pathname === '/About' ? "100vh" : "150vh"};
+      props.location.pathname === "/About" ? "100vh" : "200vh"};
+  }
+
+  @media (max-width: 678px) {
+    height: ${(props) =>
+      props.location.pathname === "/Contact" ? "130vh" : "200vh"};
   }
 `;

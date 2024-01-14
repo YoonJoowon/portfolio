@@ -78,6 +78,13 @@ const TextBox = styled.div`
     text-decoration: none;
   }
 
+  @media (max-width: 1080px) {
+    width: 90%;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const Title = styled.div`
@@ -94,7 +101,7 @@ const Title = styled.div`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    width: 300px;
+    width: 90%;
     padding: 20px;
     font-size: 1.4rem;
   }
@@ -143,16 +150,12 @@ const Subtitle = styled.div`
   margin: 20px;
   margin-top: 40px;
 
-  @media (max-width: 1280px) {
-    width: 700px;
-  }
-
   @media (max-width: 1080px) {
     display: none;
   }
 
   @media (max-width: 768px) {
-    width: 300px;
+    width: 90%;
     display: block;
     padding: 20px;
     font-size: 0.9rem;
@@ -168,8 +171,15 @@ const TextSubBox = styled.div`
   }
 
   @media (max-width: 1080px) {
-    display: block;
     flex-wrap: nowrap;
+    display: block;
+    width: 500px;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    display: block;
+    font-size: 0.9rem;
   }
 `;
 
@@ -191,19 +201,9 @@ const Text = styled.div`
     text-decoration: none;
   }
 
-  @media (max-width: 1280px) {
-    width: 350px;
-  }
-
-  @media (max-width: 1080px) {
-    width: 500px;
-  }
-
   @media (max-width: 768px) {
-    width: 300px;
+    width: 100%;
     padding: 20px;
-    font-size: 0.9rem;
+    margin-top: 10px;
   }
-
-
 `;
