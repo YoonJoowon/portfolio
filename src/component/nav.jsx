@@ -6,18 +6,18 @@ const Nav = () => {
   return (
     <>
       <ComponentBox>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <StyledLink to="/">
           <Component>Home</Component>
-        </Link>
-        <Link to="/About">
+        </StyledLink>
+        <StyledLink to="/About">
           <Component>About</Component>
-        </Link>
-        <Link to="/Project">
+        </StyledLink>
+        <StyledLink to="/Project">
           <Component>Project</Component>
-        </Link>
-        <Link to="/Contact">
+        </StyledLink>
+        <StyledLink to="/Contact">
           <Component>Contact</Component>
-        </Link>
+        </StyledLink>
       </ComponentBox>
     </>
   );
@@ -32,6 +32,10 @@ const fadeIn = keyframes`
   to {
     opacity: 1;
   }
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `;
 
 const ComponentBox = styled.div`
