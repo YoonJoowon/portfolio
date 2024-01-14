@@ -6,7 +6,7 @@ const Nav = () => {
   return (
     <>
       <ComponentBox>
-        <Link to="/">
+        <Link to="/" style={{ textDecoration: "none" }}>
           <Component>Home</Component>
         </Link>
         <Link to="/About">
@@ -39,6 +39,10 @@ const ComponentBox = styled.div`
   right: 10%;
   top: 30%;
   z-index: 1;
+
+  Link {
+    text-decoration: none;
+  }
 
   @media (max-width: 768px) {
     width: 80%;
