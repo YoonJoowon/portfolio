@@ -7,7 +7,7 @@ const Project = () => {
   return (
     <>
       <CanvasTreeContainer>
-        <CanvasBackground />
+        <CanvasBackground aboutPage={false} />
       </CanvasTreeContainer>
       <Background>
         <ProjectHover></ProjectHover>

@@ -1,9 +1,19 @@
 import React, { useRef } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 function CanvasBackground() {
   const canvasRef = useRef(null);
-  return <StyledCanvas ref={canvasRef} width={1920} height={920} />;
+  const location = useLocation();
+
+  return (
+    <StyledCanvas
+      location={location}
+      ref={canvasRef}
+      width={1920}
+      height={920}
+    />
+  );
 }
 
 export default CanvasBackground;
@@ -17,6 +27,7 @@ const StyledCanvas = styled.canvas`
   align-items: center;
 
   @media (max-width: 768px) {
-    height: 150vh;
+    height: ${(props) =>
+      props.location.pathname === '/About' ? "100vh" : "150vh"};
   }
 `;
