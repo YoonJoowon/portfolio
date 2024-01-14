@@ -24,6 +24,12 @@ const ExplainNextPage = styled.div`
   border-radius: 40px 40px 0 0;
   background-color: #1b2735;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 1rem;
+    height: 130px;
+  }
 `;
 
 const sharedStyles = `
@@ -52,8 +58,7 @@ const NextTitle = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 100%;
-    padding: 20px;
+    width: 30%;
     font-size: 1rem;
   }
 `;
@@ -73,8 +78,7 @@ const ProjectName = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 100%;
-    padding: 20px;
+    width: 70%;
     font-size: 0.9rem;
   }
 `;

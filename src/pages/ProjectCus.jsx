@@ -76,8 +76,7 @@ const ExplainBox = styled.div`
   margin-top: 50px;
   display: flex;
   padding: 20px;
-  border-radius: 20px;
-  border: 2px solid #1b2735;
+  border: 1px solid #1b2735;
   font-family: "Pretendard", sans-serif;
   /* flex-direction: column; */
 
