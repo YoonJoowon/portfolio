@@ -58,7 +58,7 @@ const NextTitle = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 30%;
+    width: 100%;
     font-size: 1rem;
   }
 `;
@@ -80,6 +80,7 @@ const ProjectName = styled.div`
   @media (max-width: 768px) {
     width: 70%;
     font-size: 0.9rem;
+    display: none;
   }
 `;
 
