@@ -85,6 +85,10 @@ const TextBox = styled.div`
   @media (max-width: 768px) {
     width: 80%;
   }
+
+  @media (max-width: 400px) {
+    width: 50%;
+  }
 `;
 
 const Title = styled.div`

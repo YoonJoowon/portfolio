@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <CanvasTreeContainer>
-        <CanvasBackground aboutPage={true} />
+        <CanvasBackground />
       </CanvasTreeContainer>
       <ResumeBox>
         <Resume />
@@ -112,6 +112,7 @@ const TextBox = styled.div`
   @media (max-width: 1480px) {
     display: none;
   }
+
 `;
 
 const Text = styled.div`
