@@ -98,9 +98,9 @@ const ProjectAilolmooncheol = () => {
         <TextBox>
           <Title>◦ 린스타트업 방식의 개발</Title>
           <Text>
-            1. 프로젝트 진행 도중 UI만을 제작하여 빠르게 사용자 VOC를 받기위해
+            1. 프로젝트 진행 도중 사용자 VOC를 받기위해 UI를 빠르게 제작하여
             커뮤니티에 배포했습니다.
-            <br />- 검증결과 인기글 1위에 등록되었습니다.
+            <br />- 인기글 1위에 등록되었습니다.
           </Text>
           <Text>
             2. Inflow, Churn, Retention 에 대한 지표를 확인하며 프로젝트를

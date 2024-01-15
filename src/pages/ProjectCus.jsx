@@ -32,7 +32,7 @@ const ProjectCus = () => {
             해당 서비스가 다른 서비스와의 차별점이 있는지 <br />
           </Text>
           <Text>
-            위와 같은 질문에 포커스를 맞추어 팀원들과 프로젝트의 MVP 및 개발을
+            위와 같은 질문에 포커스를 맞추어 팀원들과 프로젝트의 MVP정의 및 개발을
             진행했습니다.
           </Text>
         </TextBox>
@@ -61,7 +61,7 @@ const ProjectCus = () => {
       <Link to={projectPath} style={{ textDecoration: "none" }}>
         <ProjectNextBtn
           nextTitle="Next Project"
-          projectName="Other : WebGL, R3f를 통한 미니 프로젝트 개발 및 NEORDINARY 행사 참여 "
+          projectName="Other : 개발 관련 다양한 외부 활동 "
         />
       </Link>
     </>
