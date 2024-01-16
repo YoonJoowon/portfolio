@@ -39,13 +39,16 @@ const ProjectAilolmooncheol = () => {
             2. 시간과 위치 그리고 분쟁 내용을 입력
           </Text>
           <Text>
-            inflow 지표 확인 결과 판결을 받기 전까지 churn의 수치가 45%로
-            높았습니다. 채팅형 AI를 통해 이탈률울 20% 까지 낮추었습니다.
+            inflow 지표 확인 결과 판결을 받기 전까지
+            <span>
+              churn의 수치가 45%로 높았습니다. 채팅형 AI를 통해 이탈률울 20%
+              까지 낮추었습니다.
+            </span>
           </Text>
           <Text>
-            자세한 정보를 받기 위해 하단 부분의 에너지바 인터렉션을 구현하여
-            사용자 UX를 개선했습니다. 순차적으로 들어오는 text들은 Recoil을 통해
-            전역으로 관리했습니다.
+            자세한 정보를 받기 위해 하단 부분의
+            <span> 에너지바 인터렉션을 구현하여 사용자 UX를 개선</span>했습니다.
+            순차적으로 들어오는 text들은 Recoil을 통해 전역으로 관리했습니다.
           </Text>
         </TextBox>
       </ExplainBox>
@@ -58,14 +61,19 @@ const ProjectAilolmooncheol = () => {
         <TextBox>
           <Title>◦ 린스타트업 방식의 개발</Title>
           <Text>
-            판결 내용 입력 후 약 30초가 소요 됨에 따라 인터렉션을 초시계
-            개발하였습니다.
+            판결 내용 입력 후
+            <span>
+              약 30초가 소요 됨에 따라 초시계 인터렉션 구현을 통해 UX를 개선
+            </span>
+            하였습니다.
           </Text>
           <Text>
-            chatGPT API를 연결한 후 prompt를 제작하여 상황에 맞는 판결을 내리는
-            로직을 구현했습니다. 사용자의 문제가 실질적으로 해결이 되고있는지
-            서비스 만족도 조사를 넣었습니다. 그리고 firebase를 통해 data를
-            관리하였습니다.
+            <span>
+              chatGPT API를 연결한 후 prompt를 제작하여 상황에 맞는 판결을
+              내리는 로직을 구현
+            </span>
+            했습니다. 사용자의 문제가 실질적으로 해결이 되고있는지 서비스 만족도
+            조사를 넣었습니다. 그리고 firebase를 통해 data를 관리하였습니다.
           </Text>
           <Text>
             사이트 공유하기, 다시하기 기능을 통해 Inflow, Retention 수치를
@@ -98,14 +106,17 @@ const ProjectAilolmooncheol = () => {
         <TextBox>
           <Title>◦ 린스타트업 방식의 개발</Title>
           <Text>
-            1. 프로젝트 진행 도중 사용자 VOC를 받기위해 UI를 빠르게 제작하여
-            커뮤니티에 배포했습니다.
+            1. 프로젝트 진행 도중 사용자{" "}
+            <span>VOC를 받기위해 UI를 빠르게 제작</span>하여 커뮤니티에
+            배포했습니다.
             <br />- 인기글 1위에 등록되었습니다.
           </Text>
           <Text>
-            2. Inflow, Churn, Retention 에 대한 지표를 확인하며 프로젝트를
-            진행했고, MVP 에 대한 명확한 사고를 계속 재정립하였습니다.
-            <br />- 마지막 검증 단계에선 약 5.5% Reteion의 수치를 확인했습니다.
+            2. <span>Inflow, Churn, Retention</span> 에 대한 지표를 확인하며
+            프로젝트를 진행했고, MVP 에 대한 명확한 사고를 계속
+            재정립하였습니다.
+            <br />- 마지막 검증 단계에선{" "}
+            <span>약 5.5% Reteion의 수치를 확인했습니다.</span>
           </Text>
         </TextBox>
       </ExplainBox>
@@ -198,6 +209,10 @@ const Text = styled.div`
   background: white;
   border-radius: 10px;
   margin-bottom: 20px;
+
+  span {
+    color: red;
+  }
 
   @media (max-width: 768px) {
     width: 100%;

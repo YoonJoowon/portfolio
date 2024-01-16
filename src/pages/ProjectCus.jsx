@@ -25,15 +25,15 @@ const ProjectCus = () => {
         <TextBox>
           <Title>◦ Google 스프린트 프로젝트</Title>
           <Text>
-            해당 서비스를 왜 써야하는지 <br />
-            해당 서비스에서는 무엇을 이용하게 되는지 <br />
-            해당 서비스를 어떻게 개발 할 것 인지 <br />
-            해당 서비스를 개발하게 되면 얻는 것이 무엇인지 <br />
-            해당 서비스가 다른 서비스와의 차별점이 있는지 <br />
+            해당 서비스를 <span>왜 써야하는지</span> <br />
+            해당 서비스에서는 <span>무엇을 이용하게</span> 되는지 <br />
+            해당 서비스를 <span>어떻게 개발</span> 할 것 인지 <br />
+            해당 서비스를 개발하게 되면 <span>얻는 것이 무엇</span>인지 <br />
+            해당 서비스가 다른 서비스와의 <span>차별점이</span> 있는지 <br />
           </Text>
           <Text>
-            위와 같은 질문에 포커스를 맞추어 팀원들과 프로젝트의 MVP정의 및 개발을
-            진행했습니다.
+            위와 같은 질문에 포커스를 맞추어 팀원들과 <span>프로젝트의 MVP정의</span> 및
+            개발을 진행했습니다.
           </Text>
         </TextBox>
       </ExplainBox>
@@ -44,8 +44,8 @@ const ProjectCus = () => {
         <TextBox>
           <Title>◦ Google 스프린트 프로젝트</Title>
           <Text>
-            비대면으로 진행하는 프로젝트에 맞춰 Discord, Notion, Git, Figma 등의
-            소통 툴을 적극 활용하였습니다.
+          <span>비대면으로 진행하는 프로젝트에 맞춰 Discord, Notion, Git, Figma 등의
+            소통 툴을 적극 활용</span>하였습니다.
           </Text>
           <Text>
             특히 피그잼을 통해 비대면 상황에서의 소통의 중요성을 팀원들과 함께
@@ -60,7 +60,7 @@ const ProjectCus = () => {
       </ExplainBox>
       <Link to={projectPath} style={{ textDecoration: "none" }}>
         <ProjectNextBtn
-          nextTitle="Next Project"
+          nextTitle="z Project"
           projectName="Other : 개발 관련 다양한 외부 활동 "
         />
       </Link>
@@ -149,6 +149,10 @@ const Text = styled.div`
   background: white;
   border-radius: 10px;
   margin-bottom: 20px;
+  
+  span {
+    color: red;
+  }
 
   @media (max-width: 768px) {
     width: 100%;

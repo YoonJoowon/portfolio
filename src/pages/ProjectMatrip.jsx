@@ -27,7 +27,7 @@ const ProjectMatrip = () => {
         <TextBox>
           <Title>◦ Jira & Figma 를 통해 협업</Title>
           <Text>
-            다양한 직군과 협업을 위해 Jira를 도입했습니다. <br />
+            <span>다양한 직군과 협업을 위해 Jira를 도입</span>했습니다. <br />
             Jira의 직관적인 UI로 보다 원할하게 소통하여 7명의 팀원들과
             프로젝트를 일정에 맞추어 진행했습니다.
           </Text>
@@ -123,6 +123,10 @@ const Text = styled.div`
   background: white;
   border-radius: 10px;
   margin-bottom: 20px;
+
+  span {
+    color: red;
+  }
 
   @media (max-width: 768px) {
     width: 100%;
