@@ -1,7 +1,7 @@
 import React from "react";
 import { styled, keyframes } from "styled-components";
 import { Link } from "react-router-dom";
-import resumeImg from "../asset/resume.png";
+import resumeImg from "../asset/resume.jpg";
 
 const Resume = () => {
   return (
