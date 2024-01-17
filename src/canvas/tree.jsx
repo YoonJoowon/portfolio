@@ -8,7 +8,7 @@ class Tree {
     this.posX = posX;
     this.posY = posY;
     this.branches = []; //가지 담는 배열
-    this.depth = 11;
+    this.depth = 9;
 
     this.cntDepth = 0; // depth별로 그리기 위해 현재 depth 변수 선언
     this.animation = null; // 현재 동작하는 애니메이션
@@ -29,7 +29,7 @@ class Tree {
   createBranch(startX, startY, angle, depth) {
     if (depth === this.depth) return;
 
-    const len = depth === 0 ? this.random(15, 20) : this.random(4, 13);
+    const len = depth === 0 ? this.random(20, 30) : this.random(6, 20);
 
     const endX = startX + this.cos(angle) * len * (this.depth - depth);
     const endY = startY + this.sin(angle) * len * (this.depth - depth);

@@ -9,12 +9,12 @@ const Star = () => {
     return (
       <Background>
         <div className="night">
-          {[...Array(50)].map((_, index) => (
+          {[...Array(30)].map((_, index) => (
             <div
               key={index}
               className="shooting_star"
               style={{
-                animationDelay: `${Math.random() * 5000}ms`,
+                animationDelay: `${Math.random() * 10000}ms`,
                 top: `${Math.random() * 200 - 30}%`,
                 left: `${Math.random() * 100}%`,
               }}
@@ -29,7 +29,7 @@ const Star = () => {
 };
 export default Star;
 
-const shootingTime = "3000ms";
+const shootingTime = "5000ms";
 
 const Background = styled.div`
   height: 100vh;
@@ -37,10 +37,6 @@ const Background = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* @media (max-width: 768px) {
-    height: 130vh;
-  } */
 
   .night {
     position: relative;
