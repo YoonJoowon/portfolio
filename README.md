@@ -30,7 +30,7 @@ https://joowon-e95ce.web.app/
 
 - **Html**
 - **Canvas**
-- **Styled-components"**
+- **Styled-components**
 - **React**
 - **React-router**
 - **Firebase**
